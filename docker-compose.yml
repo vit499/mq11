@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  vit497_mq_front:
+    build:
+      context: ./front
+    container_name: vit497_mq_front
+    command: serve -s build -l 31001
+    restart: unless-stopped
+    ports:
+      - "31001:31001"
+    logging:
+      options:
+        max-size: 10m
+
+expose:
+  - "31001"
