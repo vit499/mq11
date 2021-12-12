@@ -12,6 +12,3 @@ services:
     logging:
       options:
         max-size: 10m
-
-expose:
-  - "31001"
