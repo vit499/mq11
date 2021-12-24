@@ -176,7 +176,7 @@ class Mq {
           runInAction(() => {
             console.log("sub ok");
             this._isSub = true;
-            this.mqttPublish({ payload: "setout1=3" });
+            this.mqttPublish({ payload: "reqfout" });
           });
         }
       });
