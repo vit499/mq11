@@ -12,7 +12,7 @@ class Mq {
     this._numObject = "0802";
     this._login = "ab@m.ru";
     this._password = "1111";
-    this._host = "home.navigard.ru";
+    this._host = "vit497.ru";
     this._port = "9083";
     this._topicSub = "ab@m.ru/0802/devsend/#";
     this._topicPub = "ab@m.ru/0802/devrec/control";

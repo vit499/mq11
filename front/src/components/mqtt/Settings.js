@@ -1,7 +1,8 @@
 import React from "react";
 import mq from "../../store/Mq";
+import { observer } from "mobx-react-lite";
 
-const Settings = () => {
+const Settings = observer(() => {
   return (
     <div className="container">
       <div className="mb-2 row">
@@ -57,6 +58,6 @@ const Settings = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Settings;
