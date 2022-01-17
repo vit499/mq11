@@ -10,10 +10,12 @@ const Publish = () => {
     mq.mqttPublish({ payload: mes });
   };
   return (
-    <div >
+    <div>
       {/* <input value={mq.topicPub} disabled={true} /> */}
-      <input class="me-2 strvvod" onChange={onMes} value={mes} />
-      <button type="submit" class="btn  btn-primary" onClick={send}>Publish</button>
+      <input className="me-2 strvvod" onChange={onMes} value={mes} />
+      <button type="submit" className="btn  btn-primary" onClick={send}>
+        Publish
+      </button>
     </div>
   );
 };

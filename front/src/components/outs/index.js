@@ -6,7 +6,7 @@ const TemperOuts = () => {
   return (
     <div>
       <SetOut />
-      {/* <TemperComp /> */}
+      <TemperComp />
     </div>
   );
 };

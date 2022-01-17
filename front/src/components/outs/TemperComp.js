@@ -4,13 +4,8 @@ import temperStore from "../../store/TemperStore";
 
 const TemperComp = observer(() => {
   return (
-    <div className="container">
-      <div className="row mb-2">
-        <div className="col-2">
-          {` temper=${temperStore.temper} out=${temperStore.sout2}`}
-          {` ftout=${temperStore.ftout1} `}
-        </div>
-      </div>
+    <div className=" down-T">
+      Температура= <span className="text-yellow">{temperStore.temper}</span>
     </div>
   );
 });

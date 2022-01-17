@@ -1,221 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#eeeeee" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#eeeeee" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+    <title>MqttApp</title>
+  </head>
 
-  <title>MqttApp</title>
-</head>
-
-<body>
-  <style type="text/css">
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background: linear-gradient(90deg, #2dec9d, #09ecec, #e7dc40);
-      background-size: 500% 500%;
-      animation: gradient 12s ease infinite;
-      min-width: 500px;
-    }
-
-    /* шапка */
-    .werh {
-      text-align: center;
-      padding: 5px;
-      background: linear-gradient(90deg, #6c90f5, #28a2c0, #40aae7);
-      border-radius: 24px;
-
-    }
-
-    /* кнопки шапки */
-    .werhk {
-      text-decoration: none;
-      color: white;
-    }
-
-    @keyframes gradient {
-      0% {
-        background-position: 0 50%;
-      }
-
-      50% {
-        background-position: 90% 50%;
-      }
-
-      100% {
-        background-position: 0 50%;
-      }
-    }
-
-    .strvvod{
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -10px 20px rgba(255, 255, 255, 0.5);
-      border: 0;
-      border-radius:10px;
-      font-size: 15px;
-      padding-left: 15px;
-      width: 75%;
-    }
-
-    .wrap {
-      height: 200px;
-      padding: 50px 0;
-      display: flex;
-
-
-    }
-
-    .span-but {
-      font-size: 18px;
-      text-align: center;
-      display: inline-block;
-      margin-top: 25px
-    }
-
-    .button {
-      color: rgb(39, 36, 36);
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 0 auto;
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5), -5px -10px 20px rgba(255, 255, 255, 0.5);
-      text-align: center;
-      transition-duration: .8s;
-    }
-    .con:hover{
-      background: radial-gradient(farthest-side ellipse at top left, rgb(48, 253, 127), rgb(2, 151, 34));
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -10px 20px rgba(255, 255, 255, 0.5);
-      transition-duration: .8s;
-    }
-    .discon:hover{
-      background: radial-gradient(farthest-side ellipse at top left, rgb(250, 121, 81), rgb(170, 32, 32));
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -10px 20px rgba(255, 255, 255, 0.5);
-      transition-duration: .8s;
-    }
-
-    .con {
-      background: radial-gradient(farthest-side ellipse at top left, rgb(6, 255, 118), rgb(5, 134, 5));
-      
-    }
-
-    .discon {
-      background: radial-gradient(farthest-side ellipse at top left, rgb(252, 83, 32), rgb(161, 3, 3));
-    }
-
-    .butter {
-      box-shadow: inset 0 0 6px;
-      border-radius: 24px;
-      background: linear-gradient(90deg, #6c90f5, #28a2c0, #40aae7);
-      text-align: center;
-      display: flex;
-      justify-content: space-around;
-    }
-    .text-yellow{
-      color: rgb(179, 255, 0);
-      font-size: 25px;
-    }
-    .but-min {
-      background: linear-gradient(45deg, #042788, #2858c0, #e740d9);
-      margin: 10px;
-      border-radius: 24px;
-      border: 0;
-      width: 50px;
-      height: 50px;
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5), -5px -10px 20px rgba(190, 151, 151, 0.5);
-      transition-duration: .8s;
-    }
-    .but-min:hover{
-      background: linear-gradient(45deg, #012eaa, #2d61d1, #fd53ef);
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -10px 20px rgba(175, 139, 139, 0.5);
-      transition-duration: .8s;
-    }
-    .but-pl:hover{
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3),-5px -10px 20px rgba(175, 139, 139, 0.5);
-      background: linear-gradient(45deg, #ec1a36, #da7d32, #fff23f);
-      transition-duration: .8s;
-    }
-
-    .but-pl {
-      background: linear-gradient(45deg, #eb0c29, #c06c28, #f1e318);
-      margin: 10px;
-      transition-duration: .8s;
-      border-radius: 24px;
-      border: 0;
-      width: 50px;
-      height: 50px;
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5), -5px -10px 20px rgba(175, 139, 139, 0.5);
-    }
-
-    .click {
-      background: radial-gradient(circle farthest-corner at 100px 50px, #00b60f, #60f378);
-      margin: 10px;
-      border-radius: 15px;
-      border: 0;
-      width: 120px;
-      height: 50px;
-      font-size: 18px;
-      text-align: center;
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5), -5px -10px 20px rgba(2, 255, 255, 0.5);
-      transition-duration: .8s;
-    }
-
-    .click:hover {
-      background: linear-gradient(90deg, #f75044, #e0b218);
-      transition-duration: .8s;
-      box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.3), -5px -10px 20px rgba(255, 255, 255, 0.5);
-    }
-
-    .vihod-vik {
-      background: radial-gradient(circle farthest-corner at 100px 50px, #57b2e6, #3b47f0);
-      text-align: center;
-      font-size: 18px;
-      border-radius: 15px;
-    }
-
-    .vihod-vk {
-      background: radial-gradient(circle farthest-corner at 100px 50px, #f75641, #8af74a);
-      text-align: center;
-      font-size: 18px;
-      border-radius: 15px;
-    }
-
-    .up-T {
-      text-align: center;
-    }
-
-    .down-T {
-      height: 50px;
-      background: linear-gradient(90deg, #17a8eb, #28a2c0, #1965ad);
-      border-radius: 24px;
-      text-align: center;
-      color: white;
-    }
-    .gg{
-      margin: 200px;
-    }
-
-    #root {
-      width: 500px;
-      padding: 50px;
-      position: relative;
-      top: 400px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: linear-gradient(90deg, #60b5d6, #6486f3);
-      font-size: 20px;
-      border-radius: 24px;
-      line-height: 45px;
-    }
-  </style>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-</body>
-
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
