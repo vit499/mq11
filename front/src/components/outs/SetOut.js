@@ -17,35 +17,37 @@ const SetOut = observer(() => {
   };
   return (
     <div className="row">
-      <div className="col-md-4">
+      <div className="">
         <div className="mb-2">
           <hr />
           {temperStore.valid && (
             <>
               <div className="mb-2">
                 {temperStore.sout2 !== 0 ? (
-                  <div style={{ backgroundColor: "pink" }}>Выход 2 включен</div>
+                  <div  class="vihod-vk">☀☀☀ Выход 2 включен ☀☀☀</div>
                 ) : (
-                  <div style={{ backgroundColor: "#dddddd" }}>
-                    Выход 2 выключен
+                  <div  class="vihod-vik">
+                   ❄❅❆ Выход 2 выключен ❄❅❆ 
                   </div>
                 )}
               </div>
-              <div className="mb-2">{` включение при Т ниже ${temperStore.ftout2} `}</div>
-              <div className="mb-2">
-                <button className="me-2" onClick={onMinus}>
+              <div className="mb-2 up-T"> Включение при Т ниже <span class="text-yellow ">{temperStore.ftout2}</span></div>
+              <div className="mb-1 p-2 butter">
+                <div>
+                  <button type="button" class="but-min ms-2" onClick={onMinus}>
                   -
                 </button>
-                {` ${val.toString()}`}
-                <button className="ms-2 me-3" onClick={onPlus}>
+                <span class="text-yellow">{val.toString()}</span>
+                <button type="button" class="but-pl ms-2 " onClick={onPlus}>
                   +
                 </button>
-                <button onClick={onSet}>Установить</button>
+                </div>
+                <button type="button" class="click "  onClick={onSet}>Установить</button>
               </div>
             </>
           )}
         </div>
-        <div>{` Температура=${temperStore.temper} `}</div>
+        <div class=" down-T">Температура= <span class="text-yellow">{temperStore.temper}</span></div>
       </div>
     </div>
   );

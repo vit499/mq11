@@ -14,14 +14,14 @@ const SetComp = () => {
   };
 
   return (
-    <div className="mb-2">
+    <div >
       <input
-        className="me-2"
+        className="me-2 strvvod"
         onChange={(e) => setPass(e.target.value)}
         value={pass}
-        placeholder="pass"
+        placeholder="Pass"
       />
-      <button onClick={onPass}>Settings</button>
+      <button type="submit" class="btn btn-primary" onClick={onPass}>Settings</button>
     </div>
   );
 };

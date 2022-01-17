@@ -5,7 +5,9 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ 
 :root {
+  --bs-hay: #5d0169;
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -43,7 +45,9 @@
     scroll-behavior: smooth;
   }
 }
-
+.jj{
+  color: #0c4128;
+}
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
@@ -51,7 +55,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -186,7 +190,7 @@ mark, .mark {
 }
 
 sub,
-sup {
+.sup {
   position: relative;
   font-size: 0.75em;
   line-height: 0;

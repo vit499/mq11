@@ -4,12 +4,13 @@ import { observer } from "mobx-react-lite";
 
 const Connection = observer(() => {
   return (
-    <div className="mb-2">
-      <button className="me-2" onClick={() => mq.mqTryConnect()}>
-        {mq.connectStatus}
-      </button>
+    <div className="mb-2 wrap">
+      <div  class="button con " onClick={() => mq.mqTryConnect()}>
+        <div class="span-but">{mq.connectStatus}</div>
+      </div>
       {mq.connectStatus === "Connected" && (
-        <button onClick={() => mq.mqttDisconnect()}>Disconnect</button>
+        <div  class="button discon" onClick={() =>
+           mq.mqttDisconnect()}><div class="span-but">Disconnect</div></div>
       )}
     </div>
   );
