@@ -14,16 +14,18 @@ const SetComp = () => {
   };
 
   return (
-    <div>
+    <div class="box"> 
+    <div class="input-container">
       <input
-        className="me-2 strvvod"
+        type="text" required
         onChange={(e) => setPass(e.target.value)}
         value={pass}
-        placeholder="Pass"
       />
-      <button type="submit" className="btn btn-primary" onClick={onPass}>
-        Settings
-      </button>
+    <label>Pass</label>
+    </div>
+      <button type="submit" className="click_vvod" onClick={onPass}>
+      <ion-icon name="key-outline"></ion-icon>
+      </button>  
     </div>
   );
 };

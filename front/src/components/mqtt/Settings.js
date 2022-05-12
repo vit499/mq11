@@ -5,7 +5,7 @@ import { observer } from "mobx-react-lite";
 const Settings = observer(() => {
   return (
     <div className="container">
-      <div className="mb-2 row">
+      <div className="mb-2 row ">
         <label className="col-sm-3">Host</label>
         <div className="col-sm-9">
           <input
@@ -56,6 +56,7 @@ const Settings = observer(() => {
           />
         </div>
       </div>
+      <hr />
     </div>
   );
 });

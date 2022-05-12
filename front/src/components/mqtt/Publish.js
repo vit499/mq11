@@ -1,23 +1,30 @@
 import React, { useState } from "react";
 import mq from "../../store/Mq";
-
 const Publish = () => {
-  const [mes, setMes] = useState("setout2=10");
+  const [mes, setMes] = useState("");
   const onMes = (e) => {
     setMes(e.target.value);
+    console.log(e.target.value)
   };
   const send = () => {
-    mq.mqttPublish({ payload: mes });
+    mq.mqttPublish({ payload: "setout2=" + String(mes) });
   };
   return (
-    <div>
-      {/* <input value={mq.topicPub} disabled={true} /> */}
-      <input className="me-2 strvvod" onChange={onMes} value={mes} />
-      <button type="submit" className="btn  btn-primary" onClick={send}>
-        Publish
-      </button>
+
+    <div class="box"> 
+        <div class="input-container">
+          {/* <input value={mq.topicPub} disabled={true} /> */}
+          <input type="text" required onChange={onMes} value={mes} />
+          <label>Ввод:</label>
+        </div>
+        <button type="submit" className="click_vvod" onClick={send}>
+        <ion-icon name="paper-plane-outline"></ion-icon>
+        </button>
     </div>
+
+
   );
 };
 
-export default Publish;
+export default Publish
+
