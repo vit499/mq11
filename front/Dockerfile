@@ -10,6 +10,6 @@ COPY . .
 
 RUN npm run build
 
-RUN npm install -g serve
+RUN npm install -g serve@13.0.2
 
-#RUN serve -s build -l 3000
+#RUN serve -s build -l 31002
