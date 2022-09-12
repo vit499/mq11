@@ -16,7 +16,7 @@ const Settings = observer(() => {
         </div>
       </div>
       <div className="mb-2 row">
-        <label className="col-sm-3">Host</label>
+        <label className="col-sm-3">Port</label>
         <div className="col-sm-9">
           <input
             className="strvvod"
@@ -26,7 +26,7 @@ const Settings = observer(() => {
         </div>
       </div>
       <div className="mb-2 row">
-        <label className="col-sm-3">Port</label>
+        <label className="col-sm-3">Login</label>
         <div className="col-sm-9">
           <input
             className="strvvod"

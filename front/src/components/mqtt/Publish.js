@@ -11,8 +11,8 @@ const Publish = () => {
   };
   return (
 
-    <div class="box"> 
-        <div class="input-container">
+    <div className="box"> 
+        <div className="input-container">
           {/* <input value={mq.topicPub} disabled={true} /> */}
           <input type="text" required onChange={onMes} value={mes} />
           <label>Ввод:</label>

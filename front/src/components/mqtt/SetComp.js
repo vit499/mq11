@@ -14,18 +14,19 @@ const SetComp = () => {
   };
 
   return (
-    <div class="box"> 
-    <div class="input-container">
-      <input
-        type="text" required
-        onChange={(e) => setPass(e.target.value)}
-        value={pass}
-      />
-    <label>Pass</label>
-    </div>
+    <div className="box">
+      <div className="input-container">
+        <input
+          type="text"
+          required
+          onChange={(e) => setPass(e.target.value)}
+          value={pass}
+        />
+        <label>Pass</label>
+      </div>
       <button type="submit" className="click_vvod" onClick={onPass}>
-      <ion-icon name="key-outline"></ion-icon>
-      </button>  
+        <ion-icon name="key-outline"></ion-icon>
+      </button>
     </div>
   );
 };

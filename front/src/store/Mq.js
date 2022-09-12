@@ -80,8 +80,8 @@ class Mq {
   setPassword(v) {
     this._password = v.target.value;
   }
-  setNumObject(numObject) {
-    this._numObject = numObject;
+  setNumObject(v) {
+    this._numObject = v.target.value;
     this._topicSub = this._login + "/" + this._numObject + "/devsend/#";
     this._topicPub = this._login + "/" + this._numObject + "/devrec/control";
   }
